@@ -1,0 +1,35 @@
+11 a b c d e f g h i j k
+1 l
+32
+INV k n12
+AND n12 i n13
+AND j d n14
+NAND n14 n13 n15
+INV i n16
+AND k n16 n17
+INV j n18
+AND n18 e n19
+NAND n19 n17 n20
+AND n20 n15 n21
+AND n18 b n22
+NAND n22 n13 n23
+AND n12 n16 n24
+AND j c n25
+NAND n25 n24 n26
+AND n26 n23 n27
+NAND n27 n21 n28
+INV n28 n29
+AND n18 a n30
+NAND n30 n24 n31
+AND k i n32
+AND j h n33
+NAND n33 n32 n34
+AND n34 n31 n35
+AND n18 f n36
+NAND n36 n32 n37
+AND j g n38
+NAND n38 n17 n39
+AND n39 n37 n40
+NAND n40 n35 n41
+INV n41 n42
+NAND n42 n29 l

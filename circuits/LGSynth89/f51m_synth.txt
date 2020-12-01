@@ -1,0 +1,114 @@
+8 wire_1  wire_2 wire_3 wire_4 wire_5 wire_6 wire_7 wire_8
+8 wire_44 wire_45 wire_46 wire_47 wire_48 wire_49 wire_50 wire_51
+111
+INV wire_7 n16
+NAND wire_8 n16 n17
+NAND n17 wire_6 n18
+INV wire_6 n19
+AND n16 n19 n20
+NAND n20 wire_8 n21
+NAND n21 n18 wire_49
+NAND wire_49 wire_8 n23
+INV n23 n24
+NAND n24 wire_5 n25
+INV wire_5 n26
+INV wire_8 wire_51
+NAND wire_51 wire_7 n28
+NAND n28 n17 wire_50
+AND wire_50 n26 n30
+NAND n30 n23 n31
+INV wire_50 n32
+NAND n32 wire_5 n33
+NAND n33 n31 n34
+INV n34 n35
+AND n35 n25 n36
+INV wire_49 n37
+INV wire_4 n38
+AND wire_7 n38 n39
+NAND n39 n37 n40
+INV n40 n41
+NAND n41 n36 n42
+AND n24 wire_4 n43
+INV n20 n44
+NAND n44 n38 n45
+NOR n45 wire_50 n46
+NAND n46 n23 n47
+NAND n20 wire_4 n48
+NAND n48 n47 n49
+NOR n49 n43 n50
+AND n50 n42 n51
+NAND n35 n25 wire_48
+AND wire_6 n38 n53
+AND n53 n23 n54
+NAND n54 wire_48 n55
+AND wire_6 wire_4 n56
+AND n56 wire_50 n57
+NAND n57 n36 n58
+AND n19 wire_4 n59
+AND n59 wire_50 n60
+NAND n60 wire_48 n61
+AND n61 n58 n62
+NAND n62 n55 n63
+INV n63 n64
+NAND n64 n51 wire_47
+INV wire_47 n66
+XOR wire_5 wire_3 n67
+INV n67 n68
+AND n68 wire_4 n69
+NAND n69 n66 n70
+AND n67 n38 n71
+NAND n71 wire_47 n72
+INV wire_3 n73
+NOR n17 n73 n74
+NAND n74 n36 n75
+AND n68 n32 n76
+AND n76 n24 n77
+AND wire_51 n26 n78
+AND n78 n67 n79
+NAND n79 n37 n80
+AND wire_7 wire_3 n81
+AND n81 n68 n82
+NAND n82 wire_49 n83
+NAND n67 n20 n84
+AND n84 n83 n85
+NAND n85 n80 n86
+NOR n86 n77 n87
+AND n87 n75 n88
+AND n88 n72 n89
+AND n89 n70 n90
+NAND n90 wire_5 n91
+XOR wire_4 wire_2 n92
+AND n92 n73 n93
+NAND n93 n91 n94
+NAND n89 n70 wire_46
+AND wire_46 n26 n96
+NAND n96 n92 n97
+AND n97 n94 n98
+NAND wire_46 n26 n99
+INV n92 n100
+AND n100 wire_3 n101
+NAND n101 n99 n102
+INV n91 n103
+NAND n100 n103 n104
+AND n104 n102 n105
+NAND n105 n98 wire_45
+INV wire_45 n107
+XOR wire_3 wire_1 n108
+INV n108 n109
+AND n109 wire_2 n110
+NAND n110 n107 n111
+AND n108 n92 n112
+NAND n112 wire_45 n113
+AND n109 wire_4 n114
+NAND n114 n103 n115
+AND wire_4 wire_3 n116
+AND n116 n109 n117
+NAND n117 n99 n118
+NOR wire_4 wire_2 n119
+NAND n119 n108 n120
+AND n120 n118 n121
+NAND n121 n115 n122
+INV n122 n123
+NAND n123 n113 n124
+INV n124 n125
+NAND n125 n111 wire_44

@@ -1,0 +1,28 @@
+5 a b c d e
+3 f g h
+25
+INV c n8
+NAND n8 b n9
+INV b n10
+NAND c n10 n11
+NAND n11 n9 n12
+INV n12 n13
+NAND n13 a n14
+INV a n15
+NAND n12 n15 n16
+NAND n16 n14 f
+INV e n18
+NAND n18 d n19
+INV d n20
+NAND e n20 n21
+NAND n21 n19 n22
+INV n22 n23
+NAND n8 n10 n24
+NAND n24 n16 n25
+INV n25 n26
+NAND n26 n23 n27
+NAND n25 n22 n28
+NAND n28 n27 g
+NAND e d n30
+NAND n26 n22 n31
+NAND n31 n30 h

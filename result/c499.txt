@@ -1,0 +1,80 @@
+Start time - 18:47:51
+Start program.
+Input circuit is received.
+Constraint to structure redundancy for CED circuit is received.
+Constraint = 1250
+Determining main characteristics of combinational circuit:
+PI = 41
+PO = 32
+Structure redundancy =  246
+Calculation of estimated structure redundancy for CED circuit based on encoding in 3bits Hemming space:
+Structure redundancy =  6170
+Calculation of estimated structure redundancy for CED circuit based on LDPC code:
+Structure redundancy =  716
+Calculation of estimated reliability characteristic for CED circuit based on LDPC code:
+Reliability characteristic =  0.25%
+Calculation of estimated structure redundancy for CED circuit based on Spectral R-code:
+Structure redundancy =  980
+Calculation of estimated reliability characteristic for CED circuit based on Spectral R-code:
+Reliability characteristic =  0.19%
+Compiling matrix of dependencies.
+Clusterization circuit outputs into 2 groups.
+Calculation of estimated structure redundancy for CED circuit based on LDPC code:
+Structure redundancy =  898
+Calculation of estimated structure redundancy for CED circuit based on Spectral R-code:
+Structure redundancy =  1106
+Clusterization circuit outputs into 4 groups.
+Calculation of estimated structure redundancy for CED circuit based on LDPC code:
+Structure redundancy =  1262
+Calculation of estimated structure redundancy for CED circuit based on Spectral R-code:
+Structure redundancy =  1420
+Selected method based on Spectral R-code with clusterization on 2 groups.
+Search time = 65.07s
+Determining main characteristics of received CED circuit:
+PO = 34
+PI =  41
+Structure redundancy =  1106
+Reliability characteristic =  1.06%
+Recording Verilog files.
+Files saved.
+Time 65.78s
+Start time - 12:36:18
+Start program.
+Input circuit is received.
+Constraint to structure redundancy for CED circuit is received.
+Constraint = 1250
+Determining main characteristics of combinational circuit:
+PI = 41
+PO = 32
+Structure redundancy =  246
+Calculation of estimated structure redundancy for CED circuit based on encoding in 3bits Hemming space:
+Structure redundancy =  6170
+Calculation of estimated structure redundancy for CED circuit based on LDPC code:
+Structure redundancy =  716
+Calculation of estimated reliability characteristic for CED circuit based on LDPC code:
+Reliability characteristic =  0.25%
+Calculation of estimated structure redundancy for CED circuit based on Spectral R-code:
+Structure redundancy =  980
+Calculation of estimated reliability characteristic for CED circuit based on Spectral R-code:
+Reliability characteristic =  0.19%
+Compiling matrix of dependencies.
+Clusterization circuit outputs into 2 groups.
+Calculation of estimated structure redundancy for CED circuit based on LDPC code:
+Structure redundancy =  898
+Calculation of estimated structure redundancy for CED circuit based on Spectral R-code:
+Structure redundancy =  1106
+Clusterization circuit outputs into 4 groups.
+Calculation of estimated structure redundancy for CED circuit based on LDPC code:
+Structure redundancy =  1262
+Calculation of estimated structure redundancy for CED circuit based on Spectral R-code:
+Structure redundancy =  1420
+Selected method based on Spectral R-code with clusterization on 2 groups.
+Search time = 62.45s
+Determining main characteristics of received CED circuit:
+PO = 34
+PI =  41
+Structure redundancy =  1106
+Reliability characteristic =  1.02%
+Recording Verilog files.
+Files saved.
+Time 63.11s

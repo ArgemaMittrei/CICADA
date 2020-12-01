@@ -1,0 +1,9 @@
+5 wire_2GAT1  wire_7GAT4  wire_3GAT2  wire_1GAT0  wire_6GAT3 
+2 wire_22GAT10  wire_23GAT9 
+6
+NAND wire_6GAT3 wire_3GAT2 n7
+NAND n7 wire_2GAT1 n8
+NAND wire_1GAT0 wire_3GAT2 n9
+NAND n9 n8 wire_22GAT10
+NAND n7 wire_7GAT4 n11
+NAND n11 n8 wire_23GAT9

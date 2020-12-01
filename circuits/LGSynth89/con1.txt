@@ -1,0 +1,26 @@
+7 f b c d a h g
+2 f0 f1
+23
+INV a n9
+INV f n10
+NAND h n10 n11
+NAND n11 n9 n12
+NAND n12 b n13
+NAND c f n14
+INV b n15
+INV c n16
+NAND n16 n15 n17
+NAND n17 n14 n18
+NAND n18 d n19
+NAND n19 n13 f0
+NAND a b n21
+NAND n21 g n22
+NAND n22 n10 n23
+INV d n24
+NAND n24 n15 n25
+NAND n25 a n26
+NAND n26 f n27
+NAND n9 n15 n28
+NAND n28 n27 n29
+INV n29 n30
+NAND n30 n23 f1

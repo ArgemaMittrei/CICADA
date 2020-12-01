@@ -1,0 +1,25 @@
+4 a b c d
+10 e f g h i j k l m n
+22
+INV b n14
+INV c n15
+AND n15 n14 n16
+INV a n17
+INV d n18
+AND n18 n17 n19
+NAND n19 n16 e
+AND n18 a n21
+NAND n21 n16 f
+AND n15 b n23
+NAND n23 n19 g
+NAND n23 n21 h
+AND c n14 n26
+NAND n26 n19 i
+NAND n26 n21 j
+AND c b n29
+NAND n29 n19 k
+NAND n29 n21 l
+AND d n17 n32
+NAND n32 n16 m
+AND d a n34
+NAND n34 n16 n
