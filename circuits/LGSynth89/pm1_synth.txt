@@ -1,0 +1,51 @@
+16 a b c d e g h i j k l m n o p q
+13 c0 d0 r s t u v w x y z a0 b0
+48
+INV l n29
+AND n29 a n30
+NOR n m n31
+NAND n31 n30 n32
+AND n30 m n33
+NAND n33 n n34
+NAND n34 n32 a0
+INV a0 n36
+INV b n37
+NAND n33 n37 n38
+INV n38 n39
+NAND n39 n36 n40
+INV n34 n42
+AND e d n43
+NAND n43 c n44
+AND k b n45
+NAND n45 n44 n46
+INV m n47
+AND n n47 n48
+NAND n48 n45 n49
+NAND n49 n46 x
+NAND x n42 n51
+NAND n51 n40 c0
+INV k n53
+NAND n42 n53 n54
+INV n54 d0
+NAND n31 n37 r
+INV n48 s
+AND k j n58
+NAND n58 m n59
+AND n h n60
+AND i g n61
+NAND n61 n60 n62
+OR n62 n59 t
+AND n k n64
+NAND n64 s n65
+INV n65 n66
+NAND n66 t u
+INV p v
+INV o w
+INV q y
+INV n44 n71
+NOR n71 n34 n72
+NAND n72 n54 n73
+AND n54 a0 n74
+NAND n74 n73 n75
+NAND n75 n33 z
+INV n73 b0

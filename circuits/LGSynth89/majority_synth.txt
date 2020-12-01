@@ -1,0 +1,15 @@
+5 a b c d e
+1 f
+12
+INV d n6
+AND e c n7
+NAND n7 b n8
+AND n8 n6 n9
+NAND n7 a n10
+AND b a n11
+NAND n11 e n12
+NAND n11 c n13
+AND n13 n12 n14
+NAND n14 n10 n15
+INV n15 n16
+NAND n16 n9 f

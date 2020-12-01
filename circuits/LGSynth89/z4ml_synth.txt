@@ -1,0 +1,52 @@
+7 wire_1  wire_2 wire_3 wire_4 wire_5 wire_6 wire_7
+4 wire_24 wire_25 wire_26 wire_27
+49
+NAND wire_7 wire_4 n11
+INV wire_7 n12
+INV wire_1 n13
+INV wire_4 n14
+NAND n14 n13 n15
+NAND wire_4 wire_1 n16
+NAND n16 n15 n17
+INV n17 n18
+NAND n18 n12 n19
+NAND n17 wire_7 n20
+NAND n20 n19 wire_27
+INV wire_27 n22
+NAND n22 wire_1 n23
+NAND n23 n11 n24
+INV n24 n25
+XNOR wire_6 wire_3 n26
+INV n26 n27
+NAND n27 n25 n28
+NAND n26 n24 n29
+NAND n29 n28 wire_26
+INV wire_26 n31
+OR wire_5 wire_2 n32
+NAND n32 wire_3 n33
+INV n33 n34
+NAND n34 n31 n35
+NAND n32 wire_6 n36
+INV n36 n37
+NAND n37 n24 n38
+AND wire_5 wire_2 n39
+INV n39 n40
+NAND n40 n38 n41
+INV n41 n42
+NAND n42 n35 wire_24
+AND wire_6 wire_3 n44
+INV wire_24 n45
+NAND n45 n44 n46
+AND n39 n24 n47
+NAND n47 n31 n48
+NAND n39 n44 n49
+NAND n49 n48 n50
+INV n50 n51
+NAND n51 n46 n52
+INV n52 n53
+AND n27 n24 n54
+NAND n54 n45 n55
+NAND n45 n32 n56
+NAND n56 n55 n57
+INV n57 n58
+NAND n58 n53 wire_25

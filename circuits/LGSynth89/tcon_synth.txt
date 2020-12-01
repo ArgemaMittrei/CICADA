@@ -1,0 +1,36 @@
+17 a b c d e f g h i k l m n o p q r
+16 c0 d0 e0 f0 g0 h0 s t u v w x y z a0 b0
+33
+INV i n33
+NAND m n33 n34
+NAND i c n35
+NAND n35 n34 c0
+NAND n n33 n37
+NAND i d n38
+NAND n38 n37 d0
+NAND o n33 n40
+NAND i e n41
+NAND n41 n40 e0
+NAND p n33 n43
+NAND i f n44
+NAND n44 n43 f0
+NAND q n33 n46
+NAND i g n47
+NAND n47 n46 g0
+NAND r n33 n49
+NAND i h n50
+NAND n50 n49 h0
+NAND k n33 n52
+NAND i a n53
+NAND n53 n52 a0
+NAND l n33 n55
+NAND i b n56
+NAND n56 n55 b0
+BUF k s
+BUF l t
+BUF m u
+BUF n v
+BUF o w
+BUF p x
+BUF q y
+BUF r z

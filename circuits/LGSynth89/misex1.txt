@@ -1,0 +1,76 @@
+8 dmpst3 dmpst2 dmpst1 dmpst0 xskip yskip page rmwB
+7 dmnst3B dmnst2B dmnst1B dmnst0B adctlp2B adctlp1B adctlp0B
+73
+INV dmpst3 n15
+AND dmpst0 n15 n16
+NAND n16 dmpst2 n17
+INV dmpst2 n18
+INV dmpst0 n19
+AND n19 dmpst3 n20
+NAND n20 n18 n21
+NAND n21 n17 n22
+AND n22 dmpst1 dmnst3B
+INV yskip n24
+AND n24 n19 n25
+INV n25 n26
+AND dmpst1 n18 n27
+NAND n27 n26 n28
+INV dmpst1 n29
+NAND page n19 n30
+NAND n30 n18 n31
+NAND n31 n29 n32
+NAND n32 n28 n33
+NAND n33 n15 n34
+NAND dmpst0 n29 n35
+INV n35 n36
+AND n18 dmpst3 n37
+NAND n37 n36 n38
+NAND n38 n34 dmnst2B
+NAND xskip n29 n40
+NAND n40 n19 n41
+NAND n41 dmpst2 n42
+NAND n24 dmpst1 n43
+INV page n44
+NAND n44 n29 n45
+NAND n45 n43 n46
+AND n19 n18 n47
+NAND n47 n46 n48
+NAND n48 n42 n49
+NAND n49 n15 n50
+NAND n50 n38 dmnst1B
+INV xskip n52
+NAND n52 n19 n53
+NAND n53 rmwB n54
+AND dmpst2 n15 n55
+AND n55 n29 n56
+NAND n56 n54 n57
+AND yskip n15 n58
+INV n58 n59
+AND n27 n19 n60
+NAND n60 n59 n61
+NAND n61 n57 dmnst0B
+NAND n36 dmpst3 n63
+NAND n19 dmpst1 n64
+NAND n64 n63 n65
+NAND n65 n18 n66
+NAND dmpst0 n18 n67
+NAND n67 n29 n68
+NAND dmpst0 dmpst1 n69
+NAND n69 n68 n70
+NAND n70 n15 n71
+NAND n71 n66 adctlp2B
+NAND n64 n35 n73
+NAND n73 dmpst3 n74
+NAND n58 dmpst1 n75
+NAND n75 n74 n76
+NAND n76 n18 n77
+NAND n69 n32 n78
+NAND n78 n15 n79
+NAND n79 n77 adctlp1B
+NAND n25 dmpst1 n81
+NAND n81 n74 n82
+NAND n82 n18 n83
+NAND n52 n29 n84
+NAND n84 n19 n85
+NAND n85 n55 n86
+NAND n86 n83 adctlp0B
