@@ -1,9 +1,0 @@
-5 G1gat G2gat G3gat G6gat G7gat
-2 G22gat G23gat
-6
-NAND G1gat G3gat G10gat
-NAND G3gat G6gat G11gat
-NAND G2gat G11gat G16gat
-NAND G11gat G7gat G19gat
-NAND G10gat G16gat G22gat
-NAND G16gat G19gat G23gat
