@@ -297,7 +297,7 @@ class AppSystemCED(QMainWindow, design.Ui_MainWindow):
                 result, cone, coders, decoders = spectral.create_spec_circuit(self.circuit, 0)
                 method = 'R'
                 t2 = round(float(t()), 2)
-                sim = spectral.error_simulation(self.circuit, cone, 1, 10000)
+                sim = spectral.error_simulation(result, cone, 1, 10000)
                 rel_result = round(sim[0][2] / sim[1] * 100, 2)
             else:
                 t2 = round(float(t()), 2)
@@ -336,7 +336,7 @@ class AppSystemCED(QMainWindow, design.Ui_MainWindow):
                 result, cone, coders, decoders = spectral.create_spec_circuit(self.circuit, 0)
                 method = 'R'
                 t2 = round(float(t()), 2)
-                sim = spectral.error_simulation(self.circuit, cone, 1, 10000)
+                sim = spectral.error_simulation(result, cone, 1, 10000)
                 rel_result = round(sim[0][2] / sim[1] * 100, 2)
             elif ced_ldpc <= self.constraint:
                 self.textEdit.append('Selected method based on LDPC code.')
@@ -364,21 +364,21 @@ class AppSystemCED(QMainWindow, design.Ui_MainWindow):
                 result, cone, coders, decoders = spectral.create_spec_circuit(self.circuit, 2)
                 method = 'R4'
                 t2 = round(float(t()), 2)
-                sim = spectral.error_simulation(self.circuit, cone, 1, 10000)
+                sim = spectral.error_simulation(result, cone, 1, 10000)
                 rel_result = round(sim[0][2] / sim[1] * 100, 2)
             elif ced_spectral_2 <= self.constraint and ced_spectral_2 != n:
                 self.textEdit.append('Selected method based on Spectral R-code with clusterization on 2 groups.')
                 result, cone, coders, decoders = spectral.create_spec_circuit(self.circuit, 1)
                 method = 'R2'
                 t2 = round(float(t()), 2)
-                sim = spectral.error_simulation(self.circuit, cone, 1, 10000)
+                sim = spectral.error_simulation(result, cone, 1, 10000)
                 rel_result = round(sim[0][2] / sim[1] * 100, 2)
             elif ced_spectral <= self.constraint:
                 self.textEdit.append('Selected method based on Spectral R-code without clusterization.')
                 result, cone, coders, decoders = spectral.create_spec_circuit(self.circuit, 0)
                 method = 'R'
                 t2 = round(float(t()), 2)
-                sim = spectral.error_simulation(self.circuit, cone, 1, 10000)
+                sim = spectral.error_simulation(result, cone, 1, 10000)
                 rel_result = round(sim[0][2] / sim[1] * 100, 2)
             else:
                 t2 = round(float(t()), 2)
@@ -431,7 +431,7 @@ class AppSystemCED(QMainWindow, design.Ui_MainWindow):
                         result, cone, coders, decoders = spectral.create_spec_circuit(self.circuit, 2)
                         method = 'R4'
                         t2 = round(float(t()), 2)
-                        sim = spectral.error_simulation(self.circuit, cone, 1, 10000)
+                        sim = spectral.error_simulation(result, cone, 1, 10000)
                         rel_result = round(sim[0][2] / sim[1] * 100, 2)
                     elif ced_spectral_2 <= self.constraint and ced_spectral_2 != n:
                         self.textEdit.append('Selected method based on Spectral R-code with clusterization on '
@@ -439,14 +439,14 @@ class AppSystemCED(QMainWindow, design.Ui_MainWindow):
                         result, cone, coders, decoders = spectral.create_spec_circuit(self.circuit, 1)
                         method = 'R2'
                         t2 = round(float(t()), 2)
-                        sim = spectral.error_simulation(self.circuit, cone, 1, 10000)
+                        sim = spectral.error_simulation(result, cone, 1, 10000)
                         rel_result = round(sim[0][2] / sim[1] * 100, 2)
                     elif ced_spectral <= self.constraint:
                         self.textEdit.append('Selected method based on Spectral R-code without clusterization.')
                         result, cone, coders, decoders = spectral.create_spec_circuit(self.circuit, 0)
                         method = 'R'
                         t2 = round(float(t()), 2)
-                        sim = spectral.error_simulation(self.circuit, cone, 1, 10000)
+                        sim = spectral.error_simulation(result, cone, 1, 10000)
                         rel_result = round(sim[0][2] / sim[1] * 100, 2)
                     else:
                         t2 = round(float(t()), 2)
@@ -498,21 +498,21 @@ class AppSystemCED(QMainWindow, design.Ui_MainWindow):
                     result, cone, coders, decoders = spectral.create_spec_circuit(self.circuit, 2)
                     method = 'R4'
                     t2 = round(float(t()), 2)
-                    sim = spectral.error_simulation(self.circuit, cone, 1, 10000)
+                    sim = spectral.error_simulation(result, cone, 1, 10000)
                     rel_result = round(sim[0][2] / sim[1] * 100, 2)
                 elif ced_spectral_2 <= self.constraint and ced_spectral_2 != n:
                     self.textEdit.append('Selected method based on Spectral R-code with clusterization on 2 groups.')
                     result, cone, coders, decoders = spectral.create_spec_circuit(self.circuit, 1)
                     method = 'R2'
                     t2 = round(float(t()), 2)
-                    sim = spectral.error_simulation(self.circuit, cone, 1, 10000)
+                    sim = spectral.error_simulation(result, cone, 1, 10000)
                     rel_result = round(sim[0][2] / sim[1] * 100, 2)
                 elif ced_spectral <= self.constraint:
                     self.textEdit.append('Selected method based on Spectral R-code without clusterization.')
                     result, cone, coders, decoders = spectral.create_spec_circuit(self.circuit, 0)
                     method = 'R'
                     t2 = round(float(t()), 2)
-                    sim = spectral.error_simulation(self.circuit, cone, 1, 10000)
+                    sim = spectral.error_simulation(result, cone, 1, 10000)
                     rel_result = round(sim[0][2] / sim[1] * 100, 2)
                 else:
                     t2 = round(float(t()), 2)
