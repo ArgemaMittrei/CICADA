@@ -61,6 +61,7 @@ class AppSystemCED(QMainWindow, design.Ui_MainWindow):
         # ==============================================================================================================
         p1, p2, p3, p4, f4 = 0.2, 0.1, 0.02, 0.009, 0.2
         ced_hemming = None
+        rel_hemming = None
         ced_spectral = None
         ced_spectral_2 = None
         ced_spectral_4 = None
@@ -158,6 +159,8 @@ class AppSystemCED(QMainWindow, design.Ui_MainWindow):
                 if element_type == 'BUF' or element_type == 'INV':  num += 1
             ced_hemming = 27 * n - 15 * num + 4 * k
             self.textEdit.append('Structure redundancy =  {}'.format(str(ced_hemming)))
+            rel_hemming = 2 * k / ced_hemming
+            self.textEdit.append('Reliability characteristic =  {}%'.format(str(round(rel_hemming * 100, 2))))
         # ==============================================================================================================
         if mtd[3]:
             self.textEdit.append('CED circuit based on LDPC code:')
@@ -285,7 +288,8 @@ class AppSystemCED(QMainWindow, design.Ui_MainWindow):
         if mtd[1] is True and ced_hemming <= self.constraint:
             self.textEdit.append('Selected method based on encoding in 3bits Hemming space.')
             result = hemming.create_hemming_circuit(self.circuit)
-            rel_result = 0.00
+            sim = hemming.error_simulation(result, 1, 10000)
+            rel_result = round(sim[0][1] / sim[1] * 100, 2)
             method = 'H'
             t2 = round(float(t()), 2)
         # ==============================================================================================================
