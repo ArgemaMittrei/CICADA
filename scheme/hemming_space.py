@@ -638,5 +638,3 @@ def exhaustive_stimulus(n_inputs):
         tmp *= (1+2**(2**i))
 
     return result
-
-def valuation_function(k, elements):    return (2*k)/elements
