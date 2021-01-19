@@ -3,6 +3,8 @@
 # **********************************************************************************************************************
 import scheme as sch
 import os
+import random
+import numpy as np
 # **********************************************************************************************************************
 def create_hemming_circuit(scheme):
     # Функция переименования узлов схемы
@@ -519,3 +521,122 @@ def calc_structure_redundancy_hemming_ced(scheme):
     predict_redundancy = 27 * scheme.elements() - 15 * num + 4 * scheme.outputs()
 
     return predict_redundancy
+
+
+def error_simulation(ced, rate, n=1500000):
+    # Проведение моделирования по инжектированию ошибок rate-кратности в схему функционального контроля
+    t_errors = [0, 0]
+
+    n_inputs = ced.inputs()
+    n_elements = ced.elements()
+    # scheme_outputs = scheme.outputs()
+    ced_outputs = ced.outputs()
+
+    # element_list = sorted(ced.__elements__.keys())
+
+    n_max = 2 ** n_inputs * n_elements
+
+    if rate == 1 and n_max <= n:
+        capacity = 2 ** n_inputs
+        num = n_max
+        input_list = exhaustive_stimulus(n_inputs)
+
+        for i in range(n_elements):
+            error_list = [0] * n_elements
+            error_list[i] = 2 ** capacity - 1
+
+            result = ced.process(input_list, error_list, capacity)
+            check = ced.process(input_list, [0] * ced.elements(), capacity)
+
+            print('result = ', result)
+            print('check = ', check)
+
+            t_errors = def_type_of_err(result, check, ced_outputs, t_errors, capacity)
+
+    else:
+        num = n
+        capacity = n // n_elements
+
+        if capacity != 0:
+            for i in range(n_elements):
+                input_list = list()
+
+                for j in range(n_inputs):   input_list.append(random.randint(0, 2 ** capacity - 1))
+
+                error_list = [0] * n_elements
+
+                while error_list.count(2 ** capacity - 1) != rate:
+                    # для инжектирования только в инф. разряды
+                    # k = random.randint(0, c_1.elements() - 1)
+                    # для инжектирование ошибок в схему без ограничений
+                    # k = random.randint(0, c_0.elements() - 1)
+                    k = random.randint(0, ced.elements() - 1)
+
+                    error_list[k] = 2 ** capacity - 1
+
+                result = ced.process(input_list, error_list, capacity)
+                check = ced.process(input_list, [0] * ced.elements(), capacity)
+
+                t_errors = def_type_of_err(result, check, ced_outputs, t_errors, capacity)
+
+        capacity = n % n_elements
+
+        for i in range(capacity):
+            input_list = list()
+
+            for j in range(n_inputs):   input_list.append(random.randint(0, 1))
+
+            error_list = [0] * n_elements
+
+            while error_list.count(1) != rate:
+                # для инжектирования только в инф. разряды
+                # k = random.randint(0, c_1.elements() - 1)
+                # для инжектирование ошибок в схему без ограничений
+                # k = random.randint(0, c_0.elements() - 1)
+                k = random.randint(0, ced.elements() - 1)
+
+                error_list[k] = 1
+
+            result = ced.process(input_list, error_list)
+            check = ced.process(input_list, [0] * ced.elements())
+
+            t_errors = def_type_of_err(result, check, ced_outputs, t_errors, 1)
+
+    return t_errors, num
+
+def def_type_of_err(result, check, ced_outputs, t_errors, capacity):
+    condition = []
+
+    result = list(result)
+    check = list(check)
+
+    for i in range(ced_outputs):                                    # преобразование списка result в необходимый формат
+        result[i] = list(bin(result[i])[2:].zfill(capacity))
+        for j in range(capacity):   result[i][j] = int(result[i][j])
+
+    for i in range(ced_outputs):                                    # преобразование списка check в необходимый формат
+        check[i] = list(bin(check[i])[2:].zfill(capacity))
+        for j in range(capacity):   check[i][j] = int(check[i][j])
+
+    result = np.transpose(result)
+    check = np.transpose(check)
+
+    for i in range(capacity): condition.append(np.array_equal(result[i], check[i]))  # сравнение выходов СФК и эталона
+
+    for i in range(capacity):
+        if condition[i]:    t_errors[0] += 1
+        else:               t_errors[1] += 1
+
+    return t_errors
+
+def exhaustive_stimulus(n_inputs):
+    tmp = 1
+    result = []
+
+    for i in range(n_inputs - 1, -1, -1):
+        result.append((2**(2**i)-1)*tmp)
+        tmp *= (1+2**(2**i))
+
+    return result
+
+def valuation_function(k, elements):    return (2*k)/elements
